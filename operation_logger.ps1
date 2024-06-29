@@ -65,7 +65,7 @@ $timer.Add_Tick({
         $windowTitle = Get-ForegroundWindowTitle
 
         if ($windowTitle -ne $previousWindowTitle) {
-            $logEntry = "$currentDateTime - The title of the currently focused window is: $windowTitle"
+            $logEntry = "$currentDateTime | $windowTitle"
         
             $logFileName = Join-Path -Path $logDirectory -ChildPath "ope_$currentDate.log"
             Add-Content -Path $logFileName -Value $logEntry
